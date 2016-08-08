@@ -1,0 +1,35 @@
+{
+  "name": "corcovado",
+  "version": "1.0.2",
+  "description": "A Cordova plugin for cookie management using the Crosswalk webview",
+  "cordova": {
+    "id": "corcovado",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/federbit/corcovado.git"
+  },
+  "keywords": [
+    "cordova",
+    "crosswalk",
+    "cookie",
+    "cookies",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=6.2.0"
+    }
+  ],
+  "author": "federbit.com",
+  "license": " MIT ",
+  "bugs": {
+    "url": "https://github.com/federbit/corcovado/issues"
+  },
+  "homepage": "https://github.com/federbit/corcovado#readme"
+}

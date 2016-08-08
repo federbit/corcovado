@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id="corcovado" version="1.0.2" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>Corcovado</name>
+    <description>A Cordova plugin for cookie management using the Crosswalk webview</description>
+    <author>federbit.com</author>
+    <keywords>cordova,crosswalk,cookie,cookies</keywords>
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version="&gt;=6.2.0" />
+    </engines>
+
+    <dependency id="cordova-plugin-crosswalk-webview" version="&gt;=1.8.0" />
+
+    <js-module src="www/corcovado.js" name="Corcovado">
+        <clobbers target="corcovado" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.INTERNET" />
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Corcovado">
+                <param name="android-package" value="com.federbit.cordova.plugin.corcovado.Corcovado"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/com/federbit/cordova/plugin/corcovado/Corcovado.java" target-dir="src/com/federbit/cordova/plugin/corcovado" />
+    </platform>
+</plugin>
